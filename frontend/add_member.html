@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Family Member</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Add Family Member</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="addMemberForm" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dob" class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" id="dob">
+                    </div>
+                    <div class="mb-3">
+                        <label for="gender" class="form-label">Gender</label>
+                        <select class="form-select" id="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nid" class="form-label">NID</label>
+                        <input type="text" class="form-control" id="nid">
+                    </div>
+                    <div class="mb-3">
+                        <label for="birth_cert" class="form-label">Birth Certificate</label>
+                        <input type="text" class="form-control" id="birth_cert">
+                    </div>
+                    <div class="mb-3">
+                        <label for="passport" class="form-label">Passport</label>
+                        <input type="text" class="form-control" id="passport">
+                    </div>
+                    <div class="mb-3">
+                        <label for="relation" class="form-label">Relation with You</label>
+                        <select class="form-select" id="relation">
+                            <option>Father</option>
+                            <option>Mother</option>
+                            <option>Son</option>
+                            <option>Daughter</option>
+                            <option>Grandson</option>
+                            <option>Granddaughter</option>
+                            <option>Brother</option>
+                            <option>Sister</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="photo" class="form-label">Upload Photo</label>
+                        <input type="file" class="form-control" id="photo" accept="image/*">
+                    </div>
+                    <div class="mb-3">
+                        <label for="documents" class="form-label">Upload Documents</label>
+                        <input type="file" class="form-control" id="documents" multiple>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Add Member</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('addMemberForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // TODO: Connect with backend API to save family member
+            alert('Family member will be saved to backend');
+        });
+    </script>
+</body>
+
+</html>
